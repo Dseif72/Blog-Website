@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Contact</title>
+</head>
+
+<body>
+  <%- include("partials/header") %>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <h1>Contact</h1>
+        <h3>Company Address</h3>
+        <p>Derek Designs</p>
+        <p>42 Wallaby Way</p>
+        <p>Sydney, AUS</p>
+        <h3>Phone Number</h3>
+        <p>123-456-7890</p>
+        <h3>Hours of Operation (EST)</h3>
+        <p>Mon - Fri : 6:00pm - 9: 00pm</p>
+        <p>Sat: 9:00am - 8:00pm</p>
+        <p>Sun: Closed</p>
+      </div>
+      <div class="col-sm-6">
+        <form class="contact" action="/contact" method="post">
+          <div class="form-group">
+            <label>Name</label>
+            <input class="form-control" type="text" name="nameUser">
+            <label>Email Address</label>
+            <input class="form-control" type="text" name="emailAddress">
+            <label>Message</label>
+            <textarea class="form-control" name="postBody" rows="5" cols="30"></textarea>
+          </div>
+
+          <button class="btn btn-primary " type="submit" name="Submit">Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer><%- include("partials/footer") %></footer>
+</body>
+
+</html>
+
+<!-- One issue: scrolling and having a sticky footer;
+Solution: Used grid system to utilize white space to the right; -->
